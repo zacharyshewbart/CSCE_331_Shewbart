@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zachary Shewbart Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body> 
+    <div id="popup-overlay" class="popup-overlay">
+        <div id="popup" class="popup">
+            <p>Welcome to my webpage!</p>
+            <p>Navigate with WASD or click the icons to travel to other pages</p>
+            <p>Spawn in a barrier? Press R to repawn on mouse position</p>
+            <p>Shift to dash!</p>
+            <button id="close-popup" class="close-popup">Close</button>
+        </div>
+    </div>
+
+    <!-- For some reason can not get to work in js file, must be in HTML, popup logic -->
+    <script> 
+        function closePopup() {
+            const popupOverlay = document.getElementById('popup-overlay');
+            if (popupOverlay) {
+                popupOverlay.style.display = 'none';
+                console.log('Popup closed');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const closeButton = document.getElementById('close-popup');
+            if (closeButton) {
+                closeButton.addEventListener('click', function() {
+                    console.log('Close button clicked');
+                    closePopup();
+                });
+            } else {
+                console.error('Close button not found');
+            }
+        });
+    </script>
+    
+    <div id="game-container">
+        <div id="player"></div>
+    
+        <!-- Barriers with percentage-based positions -->
+        <div class="barrier barrier-tall" style="top: 2%; left: 13.5%;"></div>
+        <div class="barrier barrier-square" style="top: 11%; left: 44%;"></div>
+        <div class="barrier barrier-squaresmall" style="top: 53%; left: 21%;"></div>
+        <div class="barrier barrier-square" style="top: 11%; left: 76%;"></div>
+        <div class="barrier barrier-squaresmall" style="top: 54%; left: 53.3%;"></div>
+        <div class="barrier barrier-mound" style="top: 7%; left: 20%;"></div>
+        <div class="barrier barrier-forest1" style="top: 49%; left: 36%;"></div>
+        <div class="barrier barrier-forest2" style="top: 55%; left: 28%;"></div>
+        <div class="barrier barrier-tree" style="top: 54%; left: 14.8%;"></div>
+        <div class="barrier barrier-tree" style="top: 70%; left: 22.5%;"></div>
+        <div class="barrier barrier-tree" style="top: 70%; left: 58.5%;"></div>
+        <div class="barrier barrier-tree" style="top: 22%; left: 62.5%;"></div>
+        <div class="barrier barrier-tree" style="top: 38%; left: 86.5%;"></div>
+        <div class="barrier barrier-mountain" style="top: 52%; left: 65.5%;"></div>
+        <div class="barrier barrier-wide" style="top: 6%; left: 0%;"></div>
+        <div class="barrier barrier-wide" style="top: 85%; left: 0%;"></div>
+        <div class="barrier barrier-vert" style="top: 0%; left: 3%;"></div>
+        <div class="barrier barrier-vert" style="top: 0%; left: 91%;"></div>
+        <div class="barrier barrier-mountain" style="top: 65%; left: -5%;"></div>
+        <div class="barrier barrier-mountain" style="top: 65%; left: 70%;"></div>
+
+        <!-- Floating text boxes -->
+        <div class="floating-text" id="text1" onclick="window.location.href='portfolio.html'">
+            Technical Portfolio
+        </div>
+        <div class="floating-text" id="text2" onclick="window.location.href='qualifications.html'">
+            Qualifications
+        </div>
+        <div class="floating-text" id="text3" onclick="window.location.href='service.html'">
+            Service
+        </div>
+        <div class="floating-text" id="text4" onclick="window.location.href='ai_generated.html'">
+            AI-generated Page
+        </div>
+        <div class="floating-text" id="text5" onclick="window.location.href='art_credit.html'">
+            Art Credit
+        </div>
+        <div class="title-text" id="name">
+            Zachary Shewbart's Archipelago
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
