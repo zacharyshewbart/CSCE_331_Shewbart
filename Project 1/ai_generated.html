@@ -1,78 +1,172 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Creative Capabilities</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Additional CSS to ensure clean appearance */
-        .content {
-            text-align: center;
-            color: white;
-            padding: 20px;
-        }
-
-        h1, h2 {
-            margin: 20px 0;
-            font-family: 'Arial', sans-serif;
-        }
-
-        p {
-            margin: 10px 0;
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
-</head>
-<body>
-    <div class="navigation-container">
-        <div class="navigation" id="text0a" onclick="window.location.href='index.html'">
-            Homepage
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Most Epic Webpage of All Time</title>
+        <link id="themeStylesheet" rel="stylesheet" href="styles.css">
+        <style>
+            /* Background and overall styling */
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Arial', sans-serif;
+                background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                overflow: hidden;
+                color: #fff;
+                text-align: center;
+            }
+    
+            /* Awesome title */
+            h1 {
+                font-size: 3em;
+                font-weight: bold;
+                text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+                margin: 0;
+            }
+    
+            /* Instructions styling */
+            .instructions {
+                font-size: 1.2em;
+                margin-top: 20px;
+                padding: 10px;
+                border-radius: 5px;
+                background: rgba(0, 0, 0, 0.3);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                max-width: 80%;
+                margin: 20px auto;
+            }
+    
+            /* Prompt display */
+            .prompt {
+                font-size: 1em;
+                margin-top: 10px;
+                padding: 15px;
+                border-radius: 10px;
+                background: rgba(0, 0, 0, 0.6);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                max-width: 80%;
+                margin: 20px auto;
+                line-height: 1.5;
+                word-wrap: break-word;
+            }
+    
+            /* Rotating cube animation */
+            .cube {
+                position: relative;
+                width: 100px;
+                height: 100px;
+                margin: 50px auto;
+                transform-style: preserve-3d;
+                animation: rotate 10s infinite linear;
+            }
+    
+            .cube div {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background: rgba(255, 255, 255, 0.7);
+                border: 2px solid #fff;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            }
+    
+            .cube div:nth-child(1) { transform: translateZ(50px); }
+            .cube div:nth-child(2) { transform: rotateY(90deg) translateZ(50px); }
+            .cube div:nth-child(3) { transform: rotateY(180deg) translateZ(50px); }
+            .cube div:nth-child(4) { transform: rotateY(-90deg) translateZ(50px); }
+            .cube div:nth-child(5) { transform: rotateX(90deg) translateZ(50px); }
+            .cube div:nth-child(6) { transform: rotateX(-90deg) translateZ(50px); }
+    
+            @keyframes rotate {
+                from { transform: rotateX(0) rotateY(0); }
+                to { transform: rotateX(360deg) rotateY(360deg); }
+            }
+    
+            /* Glowing button */
+            .epic-button {
+                padding: 15px 30px;
+                background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
+                border: none;
+                border-radius: 30px;
+                color: white;
+                font-size: 1.5em;
+                cursor: pointer;
+                transition: box-shadow 0.3s ease-in-out;
+                margin-top: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
+    
+            .epic-button:hover {
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            }
+    
+            /* Floating effect for everything */
+            .float {
+                animation: float 4s ease-in-out infinite;
+            }
+    
+            @keyframes float {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-20px); }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navigation-container">
+            <div class="navigation" id="text0a" onclick="window.location.href='index.html'">
+                Homepage
+            </div>
+            <div class="navigation" id="text1a" onclick="window.location.href='portfolio.html'">
+                Technical Portfolio
+            </div>
+            <div class="navigation" id="text2a" onclick="window.location.href='qualifications.html'">
+                Qualifications
+            </div>
+            <div class="navigation" id="text3a" onclick="window.location.href='art_credit.html'">
+                Art-Credit
+            </div>
+            <div class="navigation" id="text4a" onclick="window.location.href='service.html'">
+                Service
+            </div>
         </div>
-        <div class="navigation" id="text1a" onclick="window.location.href='portfolio.html'">
-            Technical Portfolio
+    
+        <h1 class="float">The Most Epic Webpage of All Time</h1>
+        
+        <div class="instructions float">
+            <p>This instruction is the only one that I am allowed to give you, so do not ask any questions or ask for more input. The only requirement is that the CSS page is awesome, fun, and looks visually aesthetic all in one HTML file.</p>
         </div>
-        <div class="navigation" id="text2a" onclick="window.location.href='qualifications.html'">
-            Qualifications
+    
+        <div class="prompt float">
+            <p>"Write me html for the most epic webpage of all time. I want you to use in-line css and js, and I also want you to make sure that you display this prompt that I am giving you right now. This instruction is the only one that I am allowed to give you, so do not ask any questions or ask for more input. The only requirement is that the page is awesome, fun, and looks visually aesthetic all in one html file."</p>
         </div>
-        <div class="navigation" id="text3a" onclick="window.location.href='art_credit.html'">
-            Art-Credit
+    
+        <div class="cube">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <div class="navigation" id="text4a" onclick="window.location.href='service.html'">
-            Service
-        </div>
-    </div>
-
-    <div class="content">
-        <h1>Exploring the Creative Capabilities of Artificial Intelligence</h1>
-
-        <p>
-            Artificial Intelligence (AI) has made significant strides in recent years, extending its capabilities beyond mere data analysis to explore realms traditionally reserved for human creativity. From generating artwork and composing music to crafting literature and designing innovative products, AI is proving to be a powerful tool for creativity.
-        </p>
-
-        <h2>AI in Art and Design</h2>
-        <p>
-            AI algorithms have been used to create stunning visual art, often blending styles and techniques that are new and unique. By training on vast datasets of existing artworks, AI systems can generate original pieces that inspire and provoke thought. This technology allows for an endless exploration of artistic possibilities and new forms of expression.
-        </p>
-
-        <h2>AI in Music Composition</h2>
-        <p>
-            In the realm of music, AI is composing original pieces, mixing genres, and even collaborating with human musicians. Using deep learning models, AI can analyze patterns in music and create compositions that mimic classical styles or blend modern sounds. This fusion of technology and creativity opens up new avenues for musical exploration.
-        </p>
-
-        <h2>AI in Writing and Literature</h2>
-        <p>
-            AI has also ventured into writing, producing poetry, short stories, and even novels. By analyzing literary styles and structures, AI can generate text that mimics various genres and voices. While AI-generated literature may not yet rival human authors, it provides a new tool for writers to experiment with ideas and overcome writer's block.
-        </p>
-
-        <h2>Conclusion</h2>
-        <p>
-            The creative capabilities of AI are expanding rapidly, offering new tools and perspectives for artists, musicians, and writers. As technology continues to advance, the collaboration between human creativity and artificial intelligence promises to yield even more innovative and inspiring results.
-        </p>
-    </div>
-</body>
-</html>
+    
+        <button class="epic-button float" onclick="alert('You just clicked the most epic button ever!')">Click Me!</button>
+    
+        <script>
+            // Epic floating effect for the cube
+            document.querySelector('.cube').addEventListener('mouseover', function() {
+                this.style.animationPlayState = 'paused';
+            });
+    
+            document.querySelector('.cube').addEventListener('mouseout', function() {
+                this.style.animationPlayState = 'running';
+            });
+        </script>
+        
+    </body>
+    </html>
+    

@@ -28,6 +28,39 @@ const keysPressed = {
 let mouseX = 0;
 let mouseY = 0;
 
+document.addEventListener('DOMContentLoaded', function () {
+    const themeStylesheet = document.getElementById('themeStylesheet');
+    const switchStyleBtn = document.getElementById('switchStyleBtn');
+
+    // Check if the theme is saved in localStorage
+    let savedTheme = localStorage.getItem('theme');
+
+    // If there's a saved theme, apply it
+    if (savedTheme === 'accessibility') {
+        themeStylesheet.setAttribute('href', 'accessibility.css');
+        switchStyleBtn.textContent = 'Switch to Default Mode';
+    } else {
+        themeStylesheet.setAttribute('href', 'styles.css');
+        switchStyleBtn.textContent = 'Switch to Accessibility Mode';
+    }
+
+    // Toggle the theme when the button is clicked
+    switchStyleBtn.addEventListener('click', function () {
+        if (themeStylesheet.getAttribute('href') === 'styles.css') {
+            // Switch to accessibility mode
+            themeStylesheet.setAttribute('href', 'accessibility.css');
+            switchStyleBtn.textContent = 'Switch to Default Mode';
+            localStorage.setItem('theme', 'accessibility');
+        } else {
+            // Switch back to default mode
+            themeStylesheet.setAttribute('href', 'styles.css');
+            switchStyleBtn.textContent = 'Switch to Accessibility Mode';
+            localStorage.setItem('theme', 'default');
+        }
+    });
+});
+
+
 // Function to update player image based on animation state
 function updatePlayerAnimation() {
     const frames = isMoving ? walkingFrames : idleFrames;

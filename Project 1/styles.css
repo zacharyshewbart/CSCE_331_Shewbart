@@ -321,7 +321,7 @@ html, body {
 }
 
 .bottom-right {
-    top: 59%;
+    top: 39%;
     left: 69%;
 }
 
@@ -343,7 +343,7 @@ html, body {
 
 .text-container {
     position: absolute;
-    top: 10%; /* Position from the top of the project image */
+    top: 6%; /* Position from the top of the project image */
     left: 50%;
     transform: translateX(-50%);
     width: 75%;
@@ -356,7 +356,7 @@ html, body {
     margin-bottom: 10px; /* Spacing between text elements */
     color: white;
     font-family: 'Silkscreen', sans-serif;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -373,8 +373,8 @@ html, body {
     position: relative; /* Relative to the container */
     margin-bottom: 10px; /* Spacing between text elements */
     color: white;
-    font-family: 'Silkscreen', sans-serif;
-    font-size: 30px;
+    font-family: 'Silkscreen', 'Times New Roman', Times, serif;
+    font-size: 25px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -396,6 +396,12 @@ html, body {
     margin: 20px 0;
 }
 
+.project img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .thankyou {
     position: relative;
     width: 60%;
@@ -409,27 +415,30 @@ html, body {
     display: block;
 }
 
-.project img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
 /* Link Icon */
 .link-icon {
     position: absolute;
     top: 10%;
-    left: -25%;
+    left: -35%;
+    width: 30%;
 }
 
+/* General styles for all link icons */
 .link-icon img {
-    width: 70%;
-    height: auto;
-    cursor: pointer;
-    border: 2px solid #ffffff;
-    border-radius: 5px;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    height: 70%;
+    position: relative;  /* Allow top and right positioning */
+    top: -20px;  /* Move up */
+    right: -20px;  /* Move right */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth animations */
 }
+
+
+/* Hover effects */
+.link-icon img:hover {
+    transform: scale(1.1);  /* Slightly increase size on hover */
+    opacity: 0.8;  /* Reduce opacity slightly on hover */
+}
+
 
 /* Image Container */
 .image-container {
@@ -462,17 +471,13 @@ html, body {
     width: auto;
     height: auto;
 }
-.image-container {
-    position: relative;
-    display: inline-block; /* Ensures the image container behaves as a block element */
-}
 
 .icon-container {
     position: absolute;
     top: 55%; /* Adjust this value to position the icons relative to the top of the image */
-    left: 34%; /* Adjust this value to position the icons relative to the left of the image */
+    left: 20%; /* Adjust this value to position the icons relative to the left of the image */
     display: flex;
-    gap: 100px; /* Space between icons */
+    gap: 400px; /* Space between icons */
 }
 
 .clickable-icon {
@@ -489,3 +494,13 @@ html, body {
 .clickable-icon:hover {
     opacity: 1;
 }
+
+/* Profile Icon Styles */
+.profile-icon {
+    display:none;
+}
+
+.profile-icon img {
+    display:none;
+}
+
