@@ -16,7 +16,7 @@ html, body {
     font-style: normal;
 }
 
-/* General Container Styles */
+/* General Container Styles for Game Index File */
 #game-container {
     width: 100%;
     height: 100vh;
@@ -31,12 +31,18 @@ html, body {
 
 .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start;
+    min-height: 100vh;
     width: 100%;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
+}
+
+.top-right {
+    top: 75%;
+    left: 40%;
 }
 
 /* Player Styles */
@@ -55,7 +61,7 @@ html, body {
 
 /* Barrier Styles */
 .barrier {
-    position: absolute;
+    position: fixed;
     background-color: transparent;
     background-size: cover;
 }
@@ -110,15 +116,15 @@ html, body {
     height: 6%;
 }
 
-/* Navigation Styles */
+/* Navigation Menu Styles */
 .navigation-container {
     position: absolute;
-    top: 10px; /* Distance from the top of the screen */
-    right: 10px; /* Distance from the right of the screen */
+    top: 10px;
+    right: 10px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Align items to the right */
-    gap: 10px; /* Space between each navigation item */
+    align-items: flex-end;
+    gap: 10px;
     z-index: 100;
 }
 
@@ -131,12 +137,11 @@ html, body {
     font-family: 'Silkscreen', sans-serif;
     font-size: 20px;
     transition: transform 0.3s ease;
-    width: 200px; /* Consistent width */
-    text-align: center; /* Center text */
-    box-sizing: border-box; /* Include padding in width calculation */
+    width: 200px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
-/* Floating Text Styles */
 .floating-text {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.6);
@@ -229,7 +234,6 @@ html, body {
     text-align: center;
 }
 
-/* Popup Styles */
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -271,29 +275,23 @@ html, body {
     background-color: #16304f;
 }
 
-/* Resume Container */
 .resume-container {
-    top: 10%;
-    width: 35%;
-    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-    z-index: 10;
+    width: 50%;
+    height: 100vh;
+    margin: 0 auto;
     position: relative;
-    background: #fff;
 }
+
 
 .resume-container iframe {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 90%;
     border: none;
-    display: block;
 }
 
-/* Side Content Styles */
 .side-content {
     position: absolute;
     display: flex;
@@ -304,15 +302,14 @@ html, body {
     z-index: 5;
 }
 
-/* Specific Corner Positions */
 .top-left {
     top: 13%;
     left: 0%;
 }
 
 .top-right {
-    top: 13%;
-    left: 69%;
+    top: 110%;
+    left: 35%;
 }
 
 .bottom-left {
@@ -325,7 +322,6 @@ html, body {
     left: 69%;
 }
 
-/* Content Block */
 .content-block {
     position: relative;
     display: flex;
@@ -343,7 +339,37 @@ html, body {
 
 .text-container {
     position: absolute;
-    top: 6%; /* Position from the top of the project image */
+    top: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    color: white;
+    text-align: center;
+}
+
+.text-container2 {
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    color: white;
+    text-align: center;
+}
+
+.text-container3 {
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    color: white;
+    text-align: center;
+}
+
+.text-container-art {
+    position: absolute;
+    top: 6%;
     left: 50%;
     transform: translateX(-50%);
     width: 75%;
@@ -352,33 +378,33 @@ html, body {
 }
 
 .overlay-text {
-    position: relative; /* Relative to the container */
-    margin-bottom: 10px; /* Spacing between text elements */
+    position: relative;
+    margin-bottom: 10px;
     color: white;
     font-family: 'Silkscreen', sans-serif;
     font-size: 18px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
-    pointer-events: none; /* Prevent pointer events on the text */
+    pointer-events: none;
 }
 
 .overlay-text a {
-    pointer-events: auto; /* Enable pointer events on links */
-    color: #00f; /* Set link color */
-    text-decoration: underline; /* Underline the links */
+    pointer-events: auto;
+    color: #00f;
+    text-decoration: underline;
 }
 
 .service-text {
-    position: relative; /* Relative to the container */
-    margin-bottom: 10px; /* Spacing between text elements */
+    position: relative;
+    margin-bottom: 10px;
     color: white;
     font-family: 'Silkscreen', 'Times New Roman', Times, serif;
     font-size: 25px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
-    pointer-events: none; /* Prevent pointer events on the text */
+    pointer-events: none;
 }
 
 /* Portfolio Container */
@@ -389,7 +415,6 @@ html, body {
     padding: 20px;
 }
 
-/* Project Styles */
 .project {
     position: relative;
     width: 60%;
@@ -415,7 +440,6 @@ html, body {
     display: block;
 }
 
-/* Link Icon */
 .link-icon {
     position: absolute;
     top: 10%;
@@ -426,21 +450,32 @@ html, body {
 /* General styles for all link icons */
 .link-icon img {
     height: 70%;
-    position: relative;  /* Allow top and right positioning */
-    top: -20px;  /* Move up */
-    right: -20px;  /* Move right */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth animations */
+    position: relative;
+    top: -20px;
+    right: -20px; 
+    transition: transform 0.3s ease, opacity 0.3s ease; 
 }
 
+.link-icon2 {
+    position: absolute;
+    top: 10%;
+    left: -35%;
+    width: 30%;
+}
 
-/* Hover effects */
+.link-icon2 img {
+    height: 70%;
+    position: relative;
+    top: -20px;
+    right: -20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
 .link-icon img:hover {
-    transform: scale(1.1);  /* Slightly increase size on hover */
-    opacity: 0.8;  /* Reduce opacity slightly on hover */
+    transform: scale(1.1);
+    opacity: 0.8;
 }
 
-
-/* Image Container */
 .image-container {
     position: relative;
     width: 100%;
@@ -454,7 +489,6 @@ html, body {
     display: block;
 }
 
-/* Service Image Container */
 .service-image-container {
     position: relative;
     width: 100%;
@@ -474,15 +508,15 @@ html, body {
 
 .icon-container {
     position: absolute;
-    top: 55%; /* Adjust this value to position the icons relative to the top of the image */
-    left: 20%; /* Adjust this value to position the icons relative to the left of the image */
+    top: 55%;
+    left: 20%;
     display: flex;
-    gap: 400px; /* Space between icons */
+    gap: 400px;
 }
 
 .clickable-icon {
-    max-width: 300px; /* Adjust icon size as needed */
-    max-height: auto; /* Adjust icon size as needed */
+    max-width: 300px;
+    max-height: auto;
     opacity: 0.8;
     transition: opacity 0.3s ease;
     cursor: pointer;
@@ -495,12 +529,49 @@ html, body {
     opacity: 1;
 }
 
-/* Profile Icon Styles */
 .profile-icon {
     display:none;
 }
 
 .profile-icon img {
     display:none;
+}
+
+/* General Button Styles */
+button {
+    right: -82%;
+    top: 10%;
+    background-color: #aa75ff;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px 0;
+    z-index: 100;
+}
+
+button:hover {
+    background-color: #1e0033;
+}
+
+button:focus {
+    outline: 3px solid #8c00a2;
+    outline-offset: 4px;
+}
+
+a:focus, .navigation:focus {
+    outline: 3px solid #f200ff;
+    outline-offset: 4px;
+}
+
+.switch-style-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 16px;
+    padding: 10px 20px;
 }
 
